@@ -36,7 +36,5 @@ jobs:
       # Runs a single command using the runners shell
     - name: A secret is not here
       run: echo hi
-
-    - name: Hello world action
-      with: # Set the secret as an input
+      env: # Or as an environment variable
         super_secret: ${{ secrets.TEST_PERSONAL_SECRET }}
