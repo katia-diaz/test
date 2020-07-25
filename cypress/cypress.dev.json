@@ -1,6 +1,6 @@
 {
   "env": {
-      "userName": "testuser@example.com",
-      "password": "test123"
+      "userName": ${{ secrets.USERNAME }},
+      "password": ${{ secrets.PASSWORD }}
   }
 }
