@@ -1,5 +1,4 @@
 node_modules/
-package-lock.json
 cypress/videos
 .DS_Store
 cypress/.DS_Store
