@@ -1,6 +1,6 @@
 {
   "env": {
-      "userName": ${{ secrets.USERNAME }},
-      "password": ${{ secrets.PASSWORD }}
+      "userName": ${{ cypress_basicAuthUserName }},
+      "password": ${{ cypress_basicAuthPassword }}
   }
 }
