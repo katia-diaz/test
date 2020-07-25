@@ -4,7 +4,9 @@
   "description": "Test repository",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:cypress": "cypress run --browser electron",
+    "cypress:clear": "cypress cache clear"
   },
   "repository": {
     "type": "git",
