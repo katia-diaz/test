@@ -23,22 +23,6 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    - name: Node.JS 12.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: "12.x"
-
-    - name: Install Node Dependencies
-      run: npm ci
-      env:
-        CI: TRUE
-    
-    - name: Run Cypress E2E Tests
-      run: npm run test:cypress
-      env:
-        username_test: ${{ secrets.TEST_APP_USERNAME }}
-        password_test: ${{ secrets.TEST_APP_PASSWORD }}
-
     # Runs a single command using the runners shell
     - name: Run a one-line script
       run: testkat='first$second' && echo $testkat
