@@ -1,4 +1,4 @@
-
+# testing_params03
 # This is a basic workflow to help you get started with Actions
 
 name: CI
@@ -7,9 +7,9 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [ testing_params03 ]
   pull_request:
-    branches: [ master ]
+    branches: [ testing_params03 ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -34,7 +34,7 @@ jobs:
         CI: TRUE
     
     - name: Run Cypress E2E Tests
-      run: npm run test:cypress --env username_test=${{secrets.TEST_APP_USERNAME}},password_test=${{secrets.TEST_APP_PASSWORD}}
+      run: npm cypress run --browser electron --env username_test=${{secrets.TEST_APP_USERNAME}},password_test=${{secrets.TEST_APP_PASSWORD}}
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
