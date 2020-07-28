@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:cypress": "cypress run --browser electron",
+    "test:cypress": "cypress run --browser electron --env username_test=$TEST_APP_USERNAME,password_test=$TEST_APP_PASSWORD",
     "cypress:clear": "cypress cache clear"
   },
   "repository": {
