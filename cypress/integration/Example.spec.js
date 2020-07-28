@@ -16,6 +16,7 @@ describe('Test', () => {
     cy.get('input[name="login.password"]').type(Cypress.env('password_test'))
     cy.get('.button-login').click()
     cy.get('#my-notes-page h2').should('be.visible')
+    console.log("I'm logged !!")
   })
 
 
