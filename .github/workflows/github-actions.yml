@@ -36,8 +36,8 @@ jobs:
     - name: Run Cypress E2E Tests
       run: npm run test:cypress
       env:
-        cypress_basicAuthUserName: ${{ secrets.USERNAME }}
-        cypress_basicAuthPassword: ${{ secrets.PASSWORD }}
+        username_test: ${{ secrets.TEST_APP_USERNAME }}
+        password_test: ${{ secrets.TEST_APP_PASSWORD }}
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
