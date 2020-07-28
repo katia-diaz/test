@@ -34,10 +34,7 @@ jobs:
         CI: TRUE
     
     - name: Run Cypress E2E Tests
-      run: npm run test:cypress
-      env:
-        username_test: ${{ secrets.TEST_APP_USERNAME }}
-        password_test: ${{ secrets.TEST_APP_PASSWORD }}
+      run: npm run test:cypress --env username_test=${{secrets.TEST_APP_USERNAME}},password_test=${{secrets.TEST_APP_PASSWORD}}
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
@@ -50,7 +47,7 @@ jobs:
         echo test, and deploy your project.
         
       # Runs a single command using the runners shell
-    - name: A secret is not here
+    - name: A secret is here
       run: echo hi
       env: # Or as an environment variable
         super_secret: ${{ secrets.TEST_PERSONAL_SECRET }}
